@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="brand">
+        <img src="icon.png" alt="">
+        <h2>MC CLASSIC</h2>
+      </div>
+      <div class="group">
+        <label>SELECT BUILD</label>
+        <select id="preset-select">
+          <option value="https://classic.minecraft.net/">Minecraft Classic (0.0.23a_01)</option>
+        </select>
+        <button class="primary" id="load-preset">Launch Selected</button>
+      </div>
+      <div class="group">
+        <label>SETTINGS & CONTROLS</label>
+        <button id="btn-fullscreen">Toggle Fullscreen</button>
+        <button id="btn-focus">Focus Game Window</button>
+        <button id="btn-terminal">Toggle Console</span></button>
+        <button id="btn-clear">Clear Console</button>
+        <button id="btn-devtools">Open Game DevTools</button>
+      </div>
+    </div>
+    <div id="main">
+      <div id="topbar">
+        <button id="btn-sidebar">&#9776;</button>
+        <button id="btn-back">&#8592;</button>
+        <button id="btn-forward">&#8594;</button>
+        <button id="btn-reload">&#8635;</button>
+        <input id="url-bar" type="text" value="https://classic.minecraft.net/" readonly>
+      </div>
+      <div id="view-wrap">
+        <webview id="game-view" src="https://classic.minecraft.net/" allowpopups></webview>
+      </div>
+      <div id="terminal"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
